@@ -1,0 +1,32 @@
+.navbar-brand{
+  color: black;
+}
+.jumbotron{
+  color:black;
+  
+}
+.container {
+	background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 70px;
+  color:red;
+}
+body {
+  background-color: black;
+}
+.wrapper{
+  padding:75px;
+}
+#articles {
+	color: red;
+}
+
+.deleteComment{
+	display: inline-block;
+}
+
+.previousComments {
+    display: inline-block;
+    width: 90%
+}

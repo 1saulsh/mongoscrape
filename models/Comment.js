@@ -1,4 +1,3 @@
-// require mongoose
 // Require Mongoose
 var mongoose = require('mongoose');
 
@@ -7,15 +6,15 @@ var Schema = mongoose.Schema;
 
 // Create Comment Schema
 var CommentSchema = new Schema({
-
-  // Author's Name
-  author: {
-    type: String
+  
+  article:{
+    type: Schema.Types.ObjectId,
+    ref:"Article"
   },
   // Comment Content
-  content: {
-    type: String
-  }
+    body: {
+      type: String,
+    }
   
 });
 

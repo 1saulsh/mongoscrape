@@ -1,8 +1,6 @@
-// Include the momentJS library
-var moment = require("moment");
-
 // Require Mongoose
 var mongoose = require('mongoose');
+var Comment = require('./Comment');
 
 // Create a Schema Class
 var Schema = mongoose.Schema;
@@ -15,31 +13,19 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-
+  summary: {
+    type: String,
+    required: true
+  },
   // Link to Article
   link: {
     type: String,
     required: true
   },
-  
-  // Summary of Article
-  summary: {
-    type: String,
-    required: true
+  saved: {
+    type: Boolean,
+    default: false
   },
-
-  // the venue where the artist is performing. 
-  venue: {
-    type: String,
-    required: true
-  },
-
-  // Date of article scrape (saving as a string to pretify it in Moment-JS)
-  updated: {
-    type: String,
-    default: moment().format('MMMM Do YYYY, h:mm A')
-  },
-
   // Create a relation with the Comment model
   comments: [{
     type: Schema.Types.ObjectId,
