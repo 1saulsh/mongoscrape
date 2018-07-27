@@ -35,8 +35,8 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 
-mongoose.connect("mongodb://localhost/mongoscrape");
-var db = mongoose.connection;
+mongoose.connect("MONGODB_URI");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoscrape";
 
 
 
